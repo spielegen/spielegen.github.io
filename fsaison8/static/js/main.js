@@ -1273,7 +1273,7 @@ var audio = {
     
     if (!audio) {
       audio = document.createElement('audio');
-      audio.setAttribute('src',' /static/process.mp3');
+      audio.setAttribute('src',' fsaison8/static/process.mp3');
       this.audio = audio;
     }
 
@@ -1360,7 +1360,7 @@ $('#prices').on('click', '.price', function(e) {
   }
 
   price = $(this).attr('price-id');
-  setWizardStepValue('packet', '<img style="width:20px" src="/static/images/icon-vbucks-50px.png"> ' + coinNums[price]);
+  setWizardStepValue('packet', '<img style="width:20px" src="fsaison8/static/images/icon-vbucks-50px.png"> ' + coinNums[price]);
   $('#platform-modal').modal('show');
 });
 
@@ -1407,7 +1407,7 @@ $('button[name="proceed"]').on('click', function() {
     var userInfoHtml = ''
       + '<div class="user-info d-md-flex justify-content-between w-100">'
       + '<div class="coins-wrap">'
-      + '<img style="width:35px" src="/static/images/icon-vbucks-50px.png"> ' + coinNums[price] + '</div>'
+      + '<img style="width:35px" src="fsaison8/static/images/icon-vbucks-50px.png"> ' + coinNums[price] + '</div>'
       + '<div class="coins-wrap">' + platforms[platform] + '<span class="text-truncate">' + username + '</span>' + '</div>'
       + '</div>'
       + '<button class="btn btn-primary btn-display btn-generate mt-4" type="button"><span>Generieren!</span></button>';
