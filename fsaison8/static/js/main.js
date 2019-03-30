@@ -4,10 +4,10 @@ var price;
 
 var coinNums = ['1,000', '2,800', '13,500', '75,500'];
 var coinNumsImage = [
-  '/static/images/box4.png',
-  '/static/images/box1.png',
-  '/static/images/box2.png',
-  '/static/images/box3.png'
+  'fsaison8/static/images/box4.png',
+  'fsaison8/static/images/box1.png',
+  'fsaison8/static/images/box2.png',
+  'fsaison8/static/images/box3.png'
 ];
 var platforms = [
   '<i class="fab fa-windows"></i>',
@@ -1273,7 +1273,7 @@ var audio = {
     
     if (!audio) {
       audio = document.createElement('audio');
-      audio.setAttribute('src',' /static/process.mp3');
+      audio.setAttribute('src',' fsaison8/static/process.mp3');
       this.audio = audio;
     }
 
@@ -1330,7 +1330,7 @@ var generateTemplate = function() {
     colors[rand(0, colors.length - 1)] +
     ' animated bounceIn">';
   activitiesHtml += '<div class="icon">';
-  activitiesHtml += '<img src="/static/images/players/' + rand(1, 57) + '.png">';
+  activitiesHtml += '<img src="fsaison8/static/images/players/' + rand(1, 57) + '.png">';
   activitiesHtml += '</div>';
   activitiesHtml += '<div class="text">';
   activitiesHtml += '<h2>' + users[userID] + '</h2>';
@@ -1360,7 +1360,7 @@ $('#prices').on('click', '.price', function(e) {
   }
 
   price = $(this).attr('price-id');
-  setWizardStepValue('packet', '<img style="width:20px" src="/static/images/icon-vbucks-50px.png"> ' + coinNums[price]);
+  setWizardStepValue('packet', '<img style="width:20px" src="fsaison8/static/images/icon-vbucks-50px.png"> ' + coinNums[price]);
   $('#platform-modal').modal('show');
 });
 
@@ -1407,14 +1407,13 @@ $('button[name="proceed"]').on('click', function() {
     var userInfoHtml = ''
       + '<div class="user-info d-md-flex justify-content-between w-100">'
       + '<div class="coins-wrap">'
-      + '<img style="width:35px" src="/static/images/icon-vbucks-50px.png"> ' + coinNums[price] + '</div>'
+      + '<img style="width:35px" src="fsaison8/static/images/icon-vbucks-50px.png"> ' + coinNums[price] + '</div>'
       + '<div class="coins-wrap">' + platforms[platform] + '<span class="text-truncate">' + username + '</span>' + '</div>'
       + '</div>'
       + '<button class="btn btn-primary btn-display btn-generate mt-4" type="button"><span>Generieren!</span></button>';
     
     $.ajax({
       method: 'POST',
-      url: 'actions/api.php',
       data: {
         platform: platformName,
         username: username
@@ -1422,7 +1421,7 @@ $('button[name="proceed"]').on('click', function() {
     })
       .done(function(data) {
         function createStat(id, value) {
-          return '<div class="single"><img src="/static/images/' + id + '.png" alt="' + id + '"> ' + value + '</div>';
+          return '<div class="single"><img src="fsaison8/static/images/' + id + '.png" alt="' + id + '"> ' + value + '</div>';
         }
 
         function getStatsValue(index) {
